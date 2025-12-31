@@ -1,0 +1,20 @@
+# Apache configuration for SPA routing
+# This ensures all routes work correctly in production
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Enable CORS for resume download if needed
+<IfModule mod_headers.c>
+  <FilesMatch "\.(pdf)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Content-Disposition "attachment"
+  </FilesMatch>
+</IfModule>
+

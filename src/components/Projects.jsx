@@ -31,7 +31,7 @@ const Projects = () => {
       category: "ML",
       featured: true,
       status: "Ongoing",
-      githubLink: "https://github.com/username/mobile-task-manager",
+      githubLink: "",
     },
     {
       title: "Generative AI chatbot with Memory integration",

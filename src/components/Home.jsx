@@ -1,5 +1,5 @@
-import { RESUME_CONFIG } from '../config/resume.config';
-import './Home.css';
+import { RESUME_CONFIG } from "../config/resume.config";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -8,25 +8,27 @@ const Home = () => {
         <div className="home-content">
           <div className="home-text">
             <h1 className="home-greeting">Hello, I'm</h1>
-            <h1 className="home-name">
-              <span className="gradient-text">Aaditya Pratap</span>
-            </h1>
+            <h1 className="home-name">Aaditya Pratap</h1>
             <h2 className="home-title">Software Developer</h2>
             <p className="home-description">
               Dedicated Backend Developer & EEE student specializing in MERN
               stack and React Native. Expert in Node.js, Express, MongoDB, and
-              building scalable RAG systems. Currently exploring ML and Web3.
+              building scalable systems. Currently exploring ML and Web3.
             </p>
             <div className="home-buttons">
-              <a href="#projects" className="btn btn-primary">
+              <a href="#projects" className="brutal-btn">
                 View My Work
               </a>
-              <a href="#contact" className="btn btn-secondary">
+              <a
+                href="#contact"
+                className="brutal-btn"
+                style={{ backgroundColor: "var(--bg-white)" }}
+              >
                 Get In Touch
               </a>
               <a
                 href={RESUME_CONFIG.RESUME_URL}
-                className="btn btn-resume"
+                className="brutal-btn btn-resume"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,7 +42,7 @@ const Home = () => {
                   <path
                     d="M10 2.5V12.5M10 12.5L6.25 8.75M10 12.5L13.75 8.75M3.75 15.625H16.25"
                     stroke="currentColor"
-                    strokeWidth="1.5"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -50,11 +52,6 @@ const Home = () => {
             </div>
           </div>
           <div className="home-visual">
-            <div className="floating-shapes">
-              <div className="shape shape-1"></div>
-              <div className="shape shape-2"></div>
-              <div className="shape shape-3"></div>
-            </div>
             <div className="code-snippet">
               <div className="code-header">
                 <span className="code-dot red"></span>
@@ -66,17 +63,12 @@ const Home = () => {
                   {`const developer = {
   name: "Aaditya Pratap",
   role: "Software Developer",
-  stack: ["MERN", "React Native", "GenAI"],
-  learning: ["Web3", "ML", "DevOps"]
+  stack: ["MERN", "React Native"],
+  learning: ["Web3", "ML"]
 };`}
                 </pre>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="scroll-indicator">
-          <div className="mouse">
-            <div className="wheel"></div>
           </div>
         </div>
       </div>
@@ -85,4 +77,3 @@ const Home = () => {
 };
 
 export default Home;
-

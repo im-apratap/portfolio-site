@@ -3,65 +3,44 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
-      title: "Real-time Video Conferencing",
+      title: "DropRoom",
       description:
-        "Real-time video conferencing platform with low-latency calls, screen sharing, chat, user authentication and intelligent transcription features.",
-      tech: ["React", "Stream", "Sentry", "MongoDB", "Axios", "Whisper"],
+        "Anonymous, real-time pastebin and file-sharing workspace. Instantly create a room, share code & files (up to 5MB) via a 6-digit code, and sync across devices without signing up.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "WebSockets"],
       category: "Full Stack",
       featured: true,
       status: "Completed",
-      githubLink: "https://github.com/im-apratap/qubit-video",
+      githubLink: "https://github.com/im-apratap/DropRoom",
     },
     {
-      title: "Video Streaming Platform",
+      title: "splitSol",
       description:
-        "Video streaming platform supporting uploads, adaptive playback, user profiles, playlists, comments, likes, subscription, and secure access control.",
-      tech: ["Nodejs", "Express", "MongoDB", "Multer", "Cloudinary", "JWT"],
-      category: "Backend",
-      featured: true,
-      status: "Completed",
-      githubLink:
-        "https://github.com/im-apratap/video-sharing-platform-backend",
-    },
-    {
-      title: "Device Control via Gesture",
-      description:
-        "Hand gesture-based interface enabling real-time device control, customizable gesture-command mapping, multi-gesture recognition, and visual feedback for accuracy.",
-      tech: ["Python", "Mediapipe", "OpenCV", "TensorFlow", "Scikit-learn"],
-      category: "ML",
+        "A Web3 bill-splitting mobile app built on Solana. Features AI receipt scanning, on-chain settlements, and a modern UI powered by React Native and Bun.",
+      tech: ["React Native", "Solana", "Web3.js", "Bun", "AI API"],
+      category: "Web3",
       featured: true,
       status: "Ongoing",
-      githubLink: "",
+      githubLink: "https://github.com/im-apratap/splitSol",
     },
     {
-      title: "Generative AI chatbot with Memory integration",
-      description:
-        "Generative AI chatbot offering contextual, memory-aware conversations, personalization, long-term user profiling, knowledge retrieval, and dynamic multi-step reasoning workflows.",
-      tech: ["LLM APIs", "mem0", "LangChain", "LangGraph", "QdrantDB"],
-      category: "GenAI",
-      featured: true,
-      status: "Completed",
-      githubLink: "",
-    },
-    {
-      title: "Todo Mobile App",
-      description:
-        "Cross-platform todo app with real-time sync, recurring tasks, reminders, categories, priorities, offline support, and collaborative shared lists.",
-      tech: ["React Native", "Expo", "Convex", "Typescript"],
-      category: "Mobile",
-      featured: false,
-      status: "Completed",
-      githubLink: "https://github.com/im-apratap/Todo-MobileApp",
-    },
-    {
-      title: "Social Media App",
+      title: "Vibe-Verse",
       description:
         "Social platform with photo/video posts, real-time feed, comments, likes, follows, messaging, content moderation, and secure user authentication.",
-      tech: ["Multer", "Cloudinary", "Arcjet", "Expo", "Clerk", "MongoDB"],
-      category: "Full Stack & mobile",
-      featured: false,
+      tech: ["React Native", "Expo", "Node.js", "MongoDB"],
+      category: "Mobile",
+      featured: true,
       status: "Ongoing",
       githubLink: "https://github.com/im-apratap/Vibe-Verse",
+    },
+    {
+      title: "college-tp-cell",
+      description:
+        "Comprehensive college training and placement cell management system to bridge the gap between students and recruiters.",
+      tech: ["React", "Express", "MongoDB", "Node.js"],
+      category: "Full Stack",
+      featured: false,
+      status: "Completed",
+      githubLink: "https://github.com/im-apratap/college-tp-cell",
     },
   ];
 

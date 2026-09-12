@@ -9,12 +9,23 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      {/* Global background stack behind the whole page. */}
+      <div className="backdrop" aria-hidden>
+        <div className="layer-canvas" />
+        <div className="layer-dots dot-matrix" />
+        <div className="layer-grid grid-lines-strong" />
+        <div className="layer-wash" />
+        <div className="layer-vignette" />
+      </div>
+
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 }

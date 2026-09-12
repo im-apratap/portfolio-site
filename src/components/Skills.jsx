@@ -1,136 +1,103 @@
-import "./Skills.css";
+import GlassCard from '../ui/GlassCard';
+import Reveal, { SectionHead } from '../ui/Reveal';
+import './Skills.css';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "React" },
-        { name: "JavaScript" },
-        { name: "TypeScript" },
-        { name: "HTML/CSS" },
-        { name: "Tailwind CSS" },
-      ],
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js" },
-        { name: "WebSocket" },
-        { name: "MongoDB" },
-        { name: "REST APIs" },
-        { name: "MySQL" },
-      ],
-    },
-    {
-      title: "Generative AI",
-      skills: [
-        { name: "LLM APIs" },
-        { name: "LangChain" },
-        { name: "Vector DB" },
-        { name: "Memo0" },
-        { name: "STT & TTS" },
-      ],
-    },
-    {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git" },
-        { name: "Docker" },
-        { name: "AWS" },
-        { name: "CI/CD" },
-      ],
-    },
-    {
-      title: "Mobile",
-      skills: [
-        { name: "React Native" },
-        { name: "Expo" },
-        { name: "Mobile UI/UX" },
-      ],
-    },
-    {
-      title: "Web3",
-      skills: [
-        { name: "Solana" },
-        { name: "Rust" },
-        { name: "Smart Contracts" },
-        { name: "Testing" },
-      ],
-    },
-  ];
+const SKILL_CATEGORIES = [
+  {
+    title: 'Frontend',
+    skills: ['React', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend',
+    skills: ['Node.js', 'WebSocket', 'MongoDB', 'REST APIs', 'MySQL'],
+  },
+  {
+    title: 'Generative AI',
+    skills: ['LLM APIs', 'LangChain', 'Vector DB', 'Memo0', 'STT & TTS'],
+  },
+  {
+    title: 'Tools & Others',
+    skills: ['Git', 'Docker', 'AWS', 'CI/CD'],
+  },
+  {
+    title: 'Mobile',
+    skills: ['React Native', 'Expo', 'Mobile UI/UX'],
+  },
+  {
+    title: 'Web3',
+    skills: ['Solana', 'Rust', 'Smart Contracts', 'Testing'],
+  },
+];
 
+const TECH_MARQUEE = [
+  'React', 'Node.js', 'MongoDB', 'Express', 'React Native', 'Git', 'Docker',
+  'MySQL', 'Next.js', 'Tailwind CSS', 'Web3', 'Solana', 'Langchain',
+  'OpenAI API', 'Gemini API', 'PostgreSQL', 'Clerk', 'Bun', 'Sentry',
+];
+
+const LANG_MARQUEE = ['JavaScript', 'TypeScript', 'Python', 'C++', 'C'];
+
+const MarqueeBand = ({ items, reverse = false, speed = 36 }) => {
+  const doubled = [...items, ...items];
   return (
-    <section id="skills" className="skills">
-      <div className="container">
-        <h2 className="section-title">
-          <span className="title-number">02.</span>
-          Skills & Technologies
-        </h2>
-        <p className="section-subtitle">
-          A comprehensive overview of my technical expertise and the tools I
-          work with
-        </p>
-        <div className="skills-grid">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3 className="category-title">{category.title}</h3>
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <span className="skill-name">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="tech-badges">
-          <h3 className="badges-title">Technologies I Work With</h3>
-          <div className="badges-container">
-            {[
-              "React",
-              "Node.js",
-              "MongoDB",
-              "Express",
-              "React Native",
-              "Git",
-              "Docker",
-              "MySQL",
-              "Next.js",
-              "Tailwind CSS",
-              "Web3",
-              "Solana",
-              "Langchain",
-              "OpenAI API",
-              "Gemini API",
-              "PostgreSQL",
-              "Clerk",
-              "Bun",
-              "Sentry",
-            ].map((tech, index) => (
-              <span key={index} className="tech-badge">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="tech-badges">
-          <h3 className="badges-title">Programming Languages I Know</h3>
-          <div className="badges-container">
-            {["JavaScript", "TypeScript", "Python", "C++", "C"].map(
-              (lang, index) => (
-                <span key={index} className="tech-badge">
-                  {lang}
-                </span>
-              )
-            )}
-          </div>
-        </div>
+    <div className="marquee mask-fade-x">
+      <div
+        className={`marquee-track ${reverse ? 'reverse' : ''}`}
+        style={{ animationDuration: `${speed}s` }}
+      >
+        {doubled.map((item, i) => (
+          <span key={`${item}-${i}`} className="marquee-item">
+            {item}
+            <span className="marquee-sep" aria-hidden>·</span>
+          </span>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
+
+const Skills = () => (
+  <section id="skills" className="skills">
+    <div className="skills-inner">
+      <SectionHead
+        eyebrow="Skills"
+        title={<>Every tool below ships in real projects — not a roadmap.</>}
+        description="The stack I reach for when building server-side systems, mobile apps and everything in between."
+      />
+
+      <div className="skills-grid">
+        {SKILL_CATEGORIES.map((category, index) => (
+          <Reveal key={category.title} delay={(index % 3) * 0.08}>
+            <GlassCard className="skill-card">
+              <div className="skill-pad">
+                <div className="skill-head">
+                  <span className="skill-index tnum">{String(index + 1).padStart(2, '0')}</span>
+                  <h3 className="skill-title">{category.title}</h3>
+                </div>
+                <div className="skill-list">
+                  {category.skills.map((skill) => (
+                    <div key={skill} className="skill-row">
+                      <span className="skill-name">{skill}</span>
+                      <span className="skill-glyph" aria-hidden>▸</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </GlassCard>
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal delay={0.1}>
+        <div className="marquee-block glass">
+          <p className="marquee-label">Technologies I work with</p>
+          <MarqueeBand items={TECH_MARQUEE} speed={42} />
+          <p className="marquee-label">Languages I know</p>
+          <MarqueeBand items={LANG_MARQUEE} reverse speed={24} />
+        </div>
+      </Reveal>
+    </div>
+  </section>
+);
 
 export default Skills;

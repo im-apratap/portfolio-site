@@ -1,0 +1,268 @@
+.research {
+  padding: 90px 24px;
+}
+
+.research-inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.pub-stream {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 16px;
+}
+
+.pub-rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pub-rail::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  bottom: -18px;
+  width: 1px;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.pub-row:first-child .pub-rail::before {
+  top: 8px;
+}
+
+.pub-row:last-child .pub-rail::before {
+  bottom: auto;
+  height: calc(100% - 8px);
+}
+
+.pub-node {
+  position: relative;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  margin-top: 24px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.85);
+  box-shadow: 0 0 10px 2px rgb(255 255 255 / 0.25);
+}
+
+.pub-row:first-child .pub-node {
+  box-shadow: 0 0 14px 4px rgb(255 255 255 / 0.35);
+}
+
+.pub-card {
+  height: 100%;
+}
+
+.pub-pad {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pub-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pub-id {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+
+.pub-status {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  color: rgb(255 255 255 / 0.55);
+}
+
+.pub-status.published {
+  color: #fff;
+  background: rgb(255 255 255 / 0.07);
+  border-color: rgb(255 255 255 / 0.16);
+}
+
+.pub-venue {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgb(255 255 255 / 0.45);
+}
+
+.pub-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgb(255 255 255 / 0.35);
+}
+
+.pub-arxiv {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: rgb(255 255 255 / 0.3);
+}
+
+.pub-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.pub-authors {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgb(255 255 255 / 0.45);
+}
+
+.pub-author.me {
+  color: rgb(255 255 255 / 0.92);
+  font-weight: 600;
+}
+
+.pub-authors-note {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: rgb(255 255 255 / 0.35);
+}
+
+.pub-abstract {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgb(255 255 255 / 0.5);
+  text-wrap: pretty;
+}
+
+.pub-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  padding: 14px 18px;
+  border: 1px solid rgb(255 255 255 / 0.06);
+  border-radius: 14px;
+  background: rgb(255 255 255 / 0.02);
+}
+
+.pub-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pub-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pub-stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.35);
+}
+
+.pub-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pub-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.04);
+  color: rgb(255 255 255 / 0.6);
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid rgb(255 255 255 / 0.06);
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.pub-link.primary {
+  background: var(--fg);
+  color: var(--canvas);
+}
+
+.pub-link.primary:hover {
+  background: rgb(255 255 255 / 0.85);
+}
+
+.pub-link.secondary {
+  border: 1px solid rgb(255 255 255 / 0.14);
+  color: rgb(255 255 255 / 0.75);
+}
+
+.pub-link.secondary:hover {
+  background: rgb(255 255 255 / 0.07);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .research {
+    padding: 64px 20px;
+  }
+
+  .pub-stream {
+    margin-top: 40px;
+  }
+
+  .pub-row {
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+  }
+
+  .pub-pad {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .pub-stats {
+    gap: 18px;
+    padding: 12px 14px;
+  }
+
+  .pub-actions {
+    flex-wrap: wrap;
+  }
+}

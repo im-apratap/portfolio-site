@@ -235,7 +235,7 @@ const Contact = () => {
           <div className="footer-top">
             <div className="footer-brand">
               <div className="footer-logo">
-                <img src="/qubit_logo.svg" alt="" width="22" height="22" />
+                <img src="/hallows_logo.svg" alt="" width="22" height="22" />
                 <span>Aaditya Pratap</span>
               </div>
               <p className="footer-tagline">
@@ -249,7 +249,7 @@ const Contact = () => {
                   </svg>
                   18 public repos
                 </span>
-                <span className="footer-badge">AI security · 2 papers</span>
+                <span className="footer-badge">AI security · 1 pub · 1 in review</span>
                 <span className="footer-badge">Open to work</span>
               </div>
             </div>

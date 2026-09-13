@@ -59,6 +59,28 @@
   display: block;
 }
 
+/* Slow hallows spin while the brand is hovered. */
+.nav-brand:hover img {
+  animation: hallows-spin 6s linear infinite;
+}
+
+@keyframes hallows-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reduced motion: the global override already collapses animations —
+   disable the spin outright so the mark never twitches. */
+@media (prefers-reduced-motion: reduce) {
+  .nav-brand:hover img {
+    animation: none;
+  }
+}
+
 .nav-menu {
   display: flex;
   align-items: center;

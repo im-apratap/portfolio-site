@@ -10,12 +10,12 @@ const FOCUS_AREAS = [
   { name: 'MERN Stack', status: 'Primary focus', shipped: true },
   { name: 'React Native', status: 'Shipped apps', shipped: true },
   { name: 'Solana / Web3', status: 'Building on-chain', shipped: true },
-  { name: 'AI Security', status: 'Research · 2 papers', shipped: true },
+  { name: 'AI Security', status: '1 published · 1 under review', shipped: true },
 ];
 
 const METRICS = [
   { value: 18, digits: 2, label: 'Public repositories on GitHub', foot: 'and counting' },
-  { value: 2, digits: 1, label: 'Research papers in AI security', foot: 'author · researcher' },
+  { value: 2, digits: 1, label: 'Research papers in AI security', foot: '1 published · 1 under review' },
   { value: 3, digits: 1, label: 'Live deployed products', foot: 'droproom · solshare · omnisplit' },
   { value: 100, suffix: '%', digits: 3, label: 'Open to opportunities', foot: 'backend · full-stack' },
 ];
@@ -52,6 +52,21 @@ const Home = () => {
     <section id="home" className="hero">
       <div aria-hidden className="hero-ambient">
         <div className="hero-noise" />
+        {/* Oversized hallows sigil — a faint texture layer, same family as the
+            global dot-matrix and grid. Static, masked to dissolve at edges. */}
+        <svg className="hero-hallows" viewBox="0 0 100 100" aria-hidden>
+          <g
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M50 10 L92 94 L8 94 Z" />
+            <circle cx="50" cy="62" r="22" />
+            <line x1="50" y1="10" x2="50" y2="94" />
+          </g>
+        </svg>
       </div>
 
       <div className="hero-grid">
@@ -90,8 +105,8 @@ const Home = () => {
             <p className="hero-sub">
               I'm Aaditya Pratap — a full-stack developer specializing in the MERN stack,
               React Native and the Solana ecosystem, building high-performance APIs and
-              scalable server-side systems. Currently researching AI security, with two
-              published papers.
+              scalable server-side systems. Currently researching AI security, with one
+              published paper and a second under review at AsiaCCS.
             </p>
           </Reveal>
 

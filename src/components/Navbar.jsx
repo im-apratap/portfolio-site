@@ -4,6 +4,7 @@ import './Navbar.css';
 const LINKS = [
   { label: 'Home', id: 'home' },
   { label: 'About', id: 'about' },
+  { label: 'Research', id: 'research' },
   { label: 'Skills', id: 'skills' },
   { label: 'Projects', id: 'projects' },
   { label: 'Contact', id: 'contact' },
@@ -73,7 +74,7 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, 'home')}
             aria-label="Aaditya Pratap — home"
           >
-            <img src="/qubit_logo.svg" alt="" width="26" height="26" />
+            <img src="/hallows_logo.svg" alt="" width="26" height="26" />
             <span>Aaditya Pratap</span>
           </a>
 

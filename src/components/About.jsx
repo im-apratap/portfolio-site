@@ -12,7 +12,7 @@ const HIGHLIGHTS = [
 const FACTS = [
   { k: 'role', v: 'Full-Stack Developer · EEE undergrad' },
   { k: 'stack', v: 'MERN · React Native · Solana · GenAI' },
-  { k: 'research', v: 'AI security · 2 published papers' },
+  { k: 'research', v: 'AI security · 1 published · 1 under review' },
   { k: 'currently', v: 'Building on the Solana ecosystem' },
   { k: 'location', v: 'Bihar, India · open to remote' },
   { k: 'status', v: 'Open to opportunities', lit: true },
@@ -33,7 +33,7 @@ const About = () => (
             <div className="about-card-pad">
               <p className="about-eyebrow">/whoami</p>
               <p className="about-para">
-                Hello! I'm a second-year Electrical &amp; Electronics Engineering student
+                Hello! I'm a third-year Electrical &amp; Electronics Engineering student
                 turned backend-focused full-stack developer, deeply passionate about
                 crafting robust, scalable server-side systems that power seamless user
                 experiences.
@@ -46,8 +46,9 @@ const About = () => (
               </p>
               <p className="about-para">
                 My research sits at the intersection of AI and security — I've
-                authored two papers in AI security, probing how these systems fail
-                and how to defend them. Alongside it, I'm building on the Solana
+                authored two papers in AI security, one published and one under
+                review at AsiaCCS, probing how these systems fail and how to
+                defend them. Alongside it, I'm building on the Solana
                 ecosystem and contributing to real-world projects that solve
                 meaningful problems through clean, efficient code.
               </p>

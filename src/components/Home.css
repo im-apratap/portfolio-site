@@ -18,6 +18,30 @@
   opacity: 0.045;
 }
 
+/* Faint oversized hallows sigil behind the hero copy. Same visual family as
+   the dot-matrix/grid textures: static, monochrome, edge-masked. */
+.hero-hallows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68vmin;
+  height: 68vmin;
+  transform: translate(-50%, -54%);
+  color: #fff;
+  opacity: 0.05;
+  pointer-events: none;
+  mask-image: radial-gradient(closest-side, #000 25%, transparent 98%);
+  -webkit-mask-image: radial-gradient(closest-side, #000 25%, transparent 98%);
+}
+
+@media (max-width: 700px) {
+  .hero-hallows {
+    width: 92vmin;
+    height: 92vmin;
+    opacity: 0.04;
+  }
+}
+
 /* Single centered column — the hero is the centerpiece. */
 .hero-grid {
   max-width: 980px;

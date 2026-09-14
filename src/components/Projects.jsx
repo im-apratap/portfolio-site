@@ -13,7 +13,7 @@ const PROJECTS = [
     category: 'Web3',
     status: 'Ongoing',
     githubLink: 'https://github.com/im-apratap/SolShare',
-    demoLink: 'https://solshare.vercel.app/',
+    demoLink: 'https://www.youtube.com/shorts/hNDvW_cN51s',
   },
   {
     title: 'OmniSplit',

@@ -30,9 +30,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  /* Native hash jumps land with the same clearance the nav's JS offset uses. */
+  scroll-padding-top: 72px;
   -webkit-tap-highlight-color: transparent;
   color-scheme: dark;
+}
+
+/* Sections tagged with an id (nav targets) clear the fixed navbar. */
+section[id] {
+  scroll-margin-top: 72px;
 }
 
 body {

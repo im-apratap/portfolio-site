@@ -19,7 +19,10 @@ const Reveal = ({ children, className = '', delay = 0, distance = 26, as = 'div'
           observer.disconnect();
         }
       },
-      { threshold: 0.2, rootMargin: '0px 0px -60px 0px' }
+      // Low threshold + shallow bottom margin: content becomes visible as
+      // soon as it meaningfully enters the viewport, so section tails are
+      // not left hidden while scrolling.
+      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
     );
     observer.observe(node);
     return () => observer.disconnect();

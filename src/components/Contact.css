@@ -1,5 +1,5 @@
 .contact {
-  padding: 90px 24px 70px;
+  padding: 72px 24px 70px;
 }
 
 .contact-inner {
@@ -341,7 +341,7 @@ a.channel-value:hover {
 
 @media (max-width: 640px) {
   .contact {
-    padding: 64px 20px 56px;
+    padding: 56px 20px 56px;
   }
 
   .contact-form {

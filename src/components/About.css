@@ -1,5 +1,7 @@
 .about {
-  padding: 90px 24px;
+  /* Asymmetric: short top keeps the previous section's tail visible longer,
+     tall bottom gives the next section's heading clear air. */
+  padding: 72px 24px 84px;
 }
 
 .about-inner {
@@ -128,7 +130,7 @@
 
 @media (max-width: 480px) {
   .about {
-    padding: 64px 20px;
+    padding: 56px 20px 64px;
   }
 
   .about-card-pad {

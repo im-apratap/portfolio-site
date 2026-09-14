@@ -13,7 +13,7 @@ const LINKS = [
 const scrollTo = (id) => {
   const element = document.getElementById(id);
   if (!element) return;
-  const offset = 84;
+  const offset = 72;
   const elementPosition = element.getBoundingClientRect().top;
   const offsetPosition = elementPosition + window.scrollY - offset;
   window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -52,6 +52,16 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
+  // Escape closes the mobile drawer.
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
+
   const handleNavClick = (e, id) => {
     e.preventDefault();
     setMenuOpen(false);
@@ -65,6 +75,12 @@ const Navbar = () => {
         className="scroll-progress"
         style={{ transform: `scaleX(${progress})` }}
         aria-hidden
+      />
+      {/* Tap-away surface behind the mobile drawer — click outside to close. */}
+      <div
+        className={`nav-backdrop ${menuOpen ? 'visible' : ''}`}
+        aria-hidden="true"
+        onClick={() => setMenuOpen(false)}
       />
       <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">

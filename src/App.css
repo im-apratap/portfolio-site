@@ -51,9 +51,9 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    125% 105% at 50% 0%,
-    transparent 62%,
-    rgb(0 0 0 / 0.72) 100%
+    125% 115% at 50% 0%,
+    transparent 66%,
+    rgb(0 0 0 / 0.5) 100%
   );
 }
 

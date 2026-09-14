@@ -131,6 +131,8 @@
 
 .nav-toggle {
   display: none;
+  position: relative;
+  z-index: 60;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -168,9 +170,41 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Tap-away surface behind the mobile drawer: click anywhere outside to
+   close. Sits above page content but below the header (nav + drawer). */
+.nav-backdrop {
+  display: none;
+}
+
 @media (max-width: 860px) {
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgb(0 0 0 / 0.5);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+    cursor: pointer;
+  }
+
+  .nav-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.35s ease;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  /* The drawer is position:fixed (out of flow), so the actions cluster
+     needs its own push to hug the right edge. */
+  .nav-actions {
+    margin-left: auto;
   }
 
   .nav-cta-label {
@@ -191,7 +225,7 @@
     align-items: stretch;
     gap: 6px;
     margin: 0;
-    padding: 96px 20px 24px;
+    padding: 84px 20px 24px;
     background: rgb(10 10 12 / 0.92);
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
